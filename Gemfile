@@ -12,6 +12,7 @@ end
 group :production do
   gem 'pg'
 end
+
 gem 'carrierwave'
 gem 'mini_magick', '3.8.0'
 gem 'puma', '~> 3.11'
@@ -51,6 +52,10 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
@@ -62,5 +67,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise'
 gem 'gravtastic'
+gem 'devise'
+# gem 'activeadmin'
+# gem 'inherited_resources', github: 'activeadmin/inherited_resources'
